@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TecnoLab | Talleres interactivos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="cabecera">
+    <div class="marca"><span class="marca-simbolo">TL</span><span>TecnoLab <small>/ Experiencias</small></span></div>
+    <div class="cabecera-etiqueta">DWEC 03 - DOM y eventos</div>
+  </header>
+
+  <main class="contenedor">
+    <section class="presentacion">
+      <div>
+        <p class="sobrelinea">Laboratorio de tecnología</p>
+        <h1>Descubre, filtra y activa talleres</h1>
+        <p class="intro">Un catálogo de experiencias tecnológicas. Explora las áreas, escoge un nivel y activa las demostraciones con el ratón o desde el teclado.</p>
+      </div>
+      <div class="panel-dato"><span class="panel-dato-cifra">03</span><span>Áreas de conocimiento</span></div>
+    </section>
+
+    <section class="zona-filtros" aria-label="Filtros del catálogo">
+      <div class="zona-filtros-cabecera">
+        <div><p class="rotulo">Explorar por área</p><h2>Catálogo de talleres</h2></div>
+        <span id="contador" class="contador" aria-live="polite">0 talleres</span>
+      </div>
+      <div id="filtrosCategorias" class="filtros-categorias">
+        <!-- Botones de ejemplo. JavaScript debe reemplazarlos por botones generados desde los datos. -->
+        <button type="button" class="filtro-btn activo ejemplo" data-categoria="todas">Todas las áreas</button>
+        <button type="button" class="filtro-btn ejemplo" data-categoria="frontend">Frontend</button>
+      </div>
+      <div class="opciones">
+        <label for="filtroNivel">Nivel de dificultad</label>
+        <select id="filtroNivel">
+          <option value="todos">Todos los niveles</option>
+          <!-- Las opciones restantes se generan desde JavaScript. -->
+        </select>
+      </div>
+    </section>
+
+    <section id="catalogo" class="catalogo" aria-label="Talleres disponibles">
+      <!-- Tarjeta de ejemplo. JavaScript debe sustituirla por tarjetas generadas desde el array. -->
+      <article class="tarjeta ejemplo" data-tecla="1">
+        <div class="imagen-marco"><img class="miniatura" src="assets/demo-1.png" alt="Miniatura del taller DOM en acción"></div>
+        <div class="tarjeta-contenido">
+          <div class="etiquetas"><span class="etiqueta-categoria">Frontend</span><span class="etiqueta-nivel">Inicial</span></div>
+          <h3>DOM en acción</h3>
+          <p>Ejemplo visual de la estructura de una tarjeta. Debe desaparecer al generar el catálogo real.</p>
+          <div class="tarjeta-pie"><span class="duracion">45 min</span><button type="button" class="boton-activar" data-tecla="1">Activar <kbd>1</kbd></button></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="consola" aria-label="Información de la demostración">
+      <div class="consola-luz" aria-hidden="true"></div>
+      <div class="consola-texto"><p class="consola-titulo">Pantalla de demostraciones</p><p id="pantalla" aria-live="polite">Selecciona una tarjeta y activa su demostración. También puedes utilizar las teclas del 1 al 9.</p></div>
+      <div class="consola-ayuda">RATÓN / TECLADO</div>
+    </section>
+
+    <p class="nota-pie">Las imágenes y los sonidos forman parte de la plantilla. No es necesario crear ni modificar los recursos multimedia.</p>
+  </main>
+
+  <div id="audios" hidden>
+    <!-- Los elementos audio ya están preparados. Relaciona su data-tecla con la tarjeta activada. -->
+    <audio data-tecla="1" src="sounds/demo-1.wav" preload="auto"></audio>
+    <audio data-tecla="2" src="sounds/demo-2.wav" preload="auto"></audio>
+    <audio data-tecla="3" src="sounds/demo-3.wav" preload="auto"></audio>
+    <audio data-tecla="4" src="sounds/demo-4.wav" preload="auto"></audio>
+    <audio data-tecla="5" src="sounds/demo-5.wav" preload="auto"></audio>
+    <audio data-tecla="6" src="sounds/demo-6.wav" preload="auto"></audio>
+    <audio data-tecla="7" src="sounds/demo-7.wav" preload="auto"></audio>
+    <audio data-tecla="8" src="sounds/demo-8.wav" preload="auto"></audio>
+    <audio data-tecla="9" src="sounds/demo-9.wav" preload="auto"></audio>
+  </div>
+  <!-- Añade aquí la etiqueta script para enlazar index.js. -->
+</body>
+</html>

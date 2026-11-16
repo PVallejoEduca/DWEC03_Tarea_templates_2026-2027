@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción TechDay - DWEC03</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-center">
+            <h4>DWEC03 - JORNADA TECNOLÓGICA</h4>
+        </div>
+    </nav>
+
+    <main class="page">
+        <section class="panel">
+            <h1>Inscripción TechDay</h1>
+            <p class="intro">
+                Completa el formulario para solicitar tu inscripción en la jornada tecnológica.
+                Los campos marcados con * son obligatorios.
+            </p>
+
+            <form id="formulario" action="index.html" method="post" novalidate>
+                <div class="grid-form">
+
+                    <div class="field">
+                        <label for="nombre">
+                            Nombre <span class="obligatorio">*</span>
+                        </label>
+                        <input type="text" id="nombre" class="desenfocado"
+                            placeholder="Ej. María José">
+                    </div>
+
+                    <div class="field">
+                        <label for="apellidos">
+                            Apellidos <span class="obligatorio">*</span>
+                        </label>
+                        <input type="text" id="apellidos" class="desenfocado"
+                            placeholder="Ej. García López">
+                    </div>
+
+                    <div class="field">
+                        <label for="fechaNacimiento">
+                            Fecha de nacimiento <span class="obligatorio">*</span>
+                        </label>
+                        <input type="text" id="fechaNacimiento" class="desenfocado"
+                            placeholder="dd/mm/aaaa">
+                    </div>
+
+                    <div class="field">
+                        <label for="edad">Edad</label>
+                        <input type="text" id="edad" disabled>
+                    </div>
+
+                    <div class="field">
+                        <label for="email">
+                            Correo electrónico <span class="obligatorio">*</span>
+                        </label>
+                        <input type="text" id="email" class="desenfocado"
+                            placeholder="nombre@dominio.com">
+                    </div>
+
+                    <div class="field">
+                        <label for="codigo">
+                            Código de inscripción <span class="obligatorio">*</span>
+                        </label>
+                        <input type="text" id="codigo" class="desenfocado"
+                            placeholder="TECH-1234">
+                    </div>
+
+                    <div class="field">
+                        <label for="github">Usuario de GitHub</label>
+                        <input type="text" id="github" class="desenfocado"
+                            placeholder="pablo-vallejo">
+                    </div>
+
+                    <div class="field">
+                        <label for="itinerario">
+                            Itinerario <span class="obligatorio">*</span>
+                        </label>
+                        <select id="itinerario" class="desenfocado">
+                            <option value="">Selecciona una opción</option>
+                            <option value="frontend">Frontend</option>
+                            <option value="backend">Backend</option>
+                            <option value="fullstack">Full Stack</option>
+                            <option value="devops">DevOps</option>
+                        </select>
+                    </div>
+
+                    <div class="field field-full">
+                        <span class="legend">
+                            Modalidad <span class="obligatorio">*</span>
+                        </span>
+                        <div class="opciones" id="grupoModalidad">
+                            <label class="opcion">
+                                <input type="radio" name="modalidad" value="presencial">
+                                Presencial
+                            </label>
+
+                            <label class="opcion">
+                                <input type="radio" name="modalidad" value="online">
+                                Online
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="field field-full">
+                        <label for="observaciones">Observaciones</label>
+                        <textarea id="observaciones" class="desenfocado"
+                            placeholder="Indica necesidades, intereses o comentarios..."></textarea>
+                        <span class="contador">
+                            <span id="contadorCaracteres">0</span>/250
+                        </span>
+                    </div>
+
+                    <div class="field field-full">
+                        <label class="aceptacion">
+                            <input type="checkbox" id="aceptar">
+                            <span>
+                                Acepto las condiciones de inscripción
+                                <span class="obligatorio">*</span>
+                            </span>
+                        </label>
+                    </div>
+
+                </div>
+
+                <div class="actions">
+                    <button type="submit" id="enviar" disabled>Enviar inscripción</button>
+                    <button type="button" id="limpiar" class="secondary" disabled>Limpiar formulario</button>
+                </div>
+            </form>
+
+            <div id="errores"></div>
+        </section>
+    </main>
+
+    <!--
+        Añade aquí la etiqueta <script> necesaria para enlazar index.js.
+        No modifiques el resto del HTML.
+    -->
+</body>
+
+</html>
